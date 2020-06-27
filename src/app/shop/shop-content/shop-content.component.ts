@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopContentComponent implements OnInit {
 
+  qtdeProdutos: number = 200;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getQtdeProdutos(): number {
+    return this.qtdeProdutos;
   }
 
 }
