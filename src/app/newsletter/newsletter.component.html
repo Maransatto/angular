@@ -8,12 +8,19 @@
 						<div class="newsletter_title_container">
 							<div class="newsletter_icon"><img src="images/send.png" alt=""></div>
 							<div class="newsletter_title">Sign up for Newsletter</div>
-							<div class="newsletter_text"><p>{{ textoNewsletter }}</p></div>
-							<div class="newsletter_text"><p>{{ email }}</p></div>
+							<!-- <div class="newsletter_text"><p>{{ textoNewsletter }}</p></div> -->
+              <!-- <div class="newsletter_text"><p>{{ email }}</p></div> -->
+              <div class="newsletter_text">
+                <p *ngIf="emailEnviado; else naoEnviado" > E-mail enviado com sucesso: {{ email }}</p>
+                <ng-template #naoEnviado>
+                  <p> E-mail não foi enviado ainda</p>
+                </ng-template>
+              </div>
+
 						</div>
 						<div class="newsletter_content clearfix">
 							<!-- <form action="#" class="newsletter_form"> -->
-								<input type="email" class="newsletter_input" required="required" placeholder="Enter your email address" (input)="onEmailEnter($event)">
+								<!-- <input type="email" class="newsletter_input" required="required" placeholder="Enter your email address" (input)="onEmailEnter($event)"> -->
 								<input type="email" class="newsletter_input" required="required" placeholder="Enter your email address" [(ngModel)]="email">
 								<button class="newsletter_button" [disabled]="!permiteNewsLetter" type="button" (click)="onSubmitNewsletter()">Subscribe</button>
 							<!-- </form> -->
