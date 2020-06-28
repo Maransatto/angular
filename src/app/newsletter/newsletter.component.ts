@@ -31,4 +31,12 @@ export class NewsletterComponent implements OnInit {
     this.email = (<HTMLInputElement>event.target).value;
   }
 
+  // getCor() {
+  //   if (this.emailEnviado) {
+  //     return 'green';
+  //   } else {
+  //     return 'yellow';
+  //   }
+  // }
+
 }
