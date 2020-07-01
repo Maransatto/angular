@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-shop-content',
@@ -7,21 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopContentComponent implements OnInit {
 
-  qtdeProdutos: number = 200;
-  produtos: {nome, preco}[];
+  produtos: any;
 
-  constructor() { }
+  constructor(
+    private productService: ProductService
+  ) { }
 
   ngOnInit() {
-    this.produtos = new Array<{ nome, preco }>();
-    this.produtos.push({ nome: 'Bateria', preco: 100.70 });
-    this.produtos.push({ nome: 'Rádio', preco: 99.70 });
-    this.produtos.push({ nome: 'TV', preco: 50.25 });
-    this.produtos.push({ nome: 'Outra coisa', preco: 100.00 });
+    this.productService.getProducts().subscribe(
+      (data) => {
+        this.produtos = data['produtos'];
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+    // this.produtos = new Array<{ nome, preco }>();
+    // this.produtos.push({ nome: 'Bateria', preco: 100.70 });
+    // this.produtos.push({ nome: 'Rádio', preco: 99.70 });
+    // this.produtos.push({ nome: 'TV', preco: 50.25 });
+    // this.produtos.push({ nome: 'Outra coisa', preco: 100.00 });
   }
 
   getQtdeProdutos(): number {
-    return this.qtdeProdutos;
+    return this.produtos.length;
   }
 
 }
