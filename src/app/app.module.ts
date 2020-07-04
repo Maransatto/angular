@@ -17,6 +17,7 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
 import { FooterComponent } from './footer/footer.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductItemComponent } from './product/product-item/product-item.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrandsComponent,
     NewsletterComponent,
     FooterComponent,
-    CopyrightComponent
+    CopyrightComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,
