@@ -32,6 +32,8 @@
               "src/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css",
               "src/assets/styles/shop_styles.css",
               "src/assets/styles/shop_responsive.css",
+              "src/assets/styles/product_styles.css",
+              "src/assets/styles/product_responsive.css",
               "src/styles.css"
             ],
             "scripts": [
@@ -49,7 +51,8 @@
               "src/assets/plugins/Isotope/isotope.pkgd.min.js",
               "src/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.js",
               "src/assets/plugins/parallax-js-master/parallax.min.js",
-              "src/assets/js/shop_custom.js"
+              "src/assets/js/shop_custom.js",
+              "src/assets/js/product_custom.js"
             ]
           },
           "configurations": {
