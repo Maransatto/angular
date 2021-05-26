@@ -53,7 +53,13 @@
               "src/assets/plugins/parallax-js-master/parallax.min.js",
               "src/assets/js/shop_custom.js",
               "src/assets/js/product_custom.js"
-            ]
+            ],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
